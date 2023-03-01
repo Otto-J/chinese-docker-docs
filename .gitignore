@@ -10,3 +10,7 @@ CNAME
 _kbase/**
 /vendor
 /lint
+
+
+node_modules/
+**/.vitepress/cache/

@@ -1,0 +1,27 @@
+{
+  "name": "c-docker-docs",
+  "version": "1.0.0",
+  "description": "<img src=\"assets/images/docker-docs.png\" alt=\"Welcome to Docker Documentation\" style=\"max-width: 50%;\">",
+  "main": "index.js",
+  "scripts": {
+    "dev": "docker compose up --build",
+    "docs:dev": "vitepress dev ./",
+    "docs:dev2": "vitepress dev nextwork",
+    "docs:build": "vitepress build ./",
+    "docs:preview": "vitepress preview ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Otto-J/chinese-docker-docs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Otto-J/chinese-docker-docs/issues"
+  },
+  "homepage": "https://github.com/Otto-J/chinese-docker-docs#readme",
+  "devDependencies": {
+    "vitepress": "1.0.0-alpha.49",
+    "vue": "^3.2.47"
+  }
+}
