@@ -29,7 +29,7 @@ jobs:
 
       - name: Deploy to Pages
         run: |
-          cd /dist
+          cd ./dist
           git config --global init.defaultBranch master
           git init
           git config user.email "${{secrets.EMAIL}}"
