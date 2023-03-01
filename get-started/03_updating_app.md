@@ -19,7 +19,7 @@ description: Making changes to our example learning application
    ...
    ```
 
-2. 使用您在 [part 2](./02_our_app.md/#build-the-apps-container-image) 中使用的相同 `docker build` 命令构建映像的更新版本。
+2. 使用您在 [part 2](./02_our_app/#build-the-apps-container-image) 中使用的相同 `docker build` 命令构建映像的更新版本。
 
    ```console
    $ docker build -t getting-started .
@@ -89,7 +89,7 @@ docker: Error response from daemon: driver failed programming external connectiv
 $ docker run -dp 3000:3000 getting-started
 ```
 
-2. 刷新浏览器 [http://localhost:3000](http://localhost:3000) 你会看到更新的文本。
+2. 刷新浏览器 <a href="http://localhost:3000" target="_blank" rel="noreferrer">http://localhost:3000</a> 你会看到更新的文本。
 
 ![Updated application with updated empty text](images/todo-list-updated-empty-text.png)
 

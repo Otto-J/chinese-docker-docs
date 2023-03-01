@@ -19,13 +19,13 @@ The advanced modules teach you how to:
 
 Docker Desktop will set up Kubernetes for you quickly and easily. Follow the setup and validation instructions appropriate for your operating system:
 
-<ul class="nav nav-tabs">
+<!-- <ul class="nav nav-tabs">
   <li class="active"><a data-toggle="tab" href="#kubeosx">Mac</a></li>
   <li><a data-toggle="tab" href="#kubewin">Windows</a></li>
 </ul>
 <div class="tab-content">
-  <div id="kubeosx" class="tab-pane fade in active">
-{% capture local-content %}
+  <div id="kubeosx" class="tab-pane fade in active"> -->
+<!-- {% capture local-content %} -->
 
 ### Mac
 
@@ -42,9 +42,9 @@ Docker Desktop will set up Kubernetes for you quickly and easily. Follow the set
       name: demo
     spec:
       containers:
-      - name: testpod
-        image: alpine:latest
-        command: ["ping", "8.8.8.8"]
+        - name: testpod
+          image: alpine:latest
+          command: ["ping", "8.8.8.8"]
     ```
 
     This describes a pod with a single container, isolating a simple ping to 8.8.8.8.
@@ -90,12 +90,13 @@ Docker Desktop will set up Kubernetes for you quickly and easily. Follow the set
     $ kubectl delete -f pod.yaml
     ```
 
-{% endcapture %}
-{{ local-content | markdownify }}
+<!-- {% endcapture %}
+{{ local-content | markdownify }} -->
 
-</div>
-<div id="kubewin" class="tab-pane fade" markdown="1">
-{% capture localwin-content %}
+<!-- </div>
+<div id="kubewin" class="tab-pane fade" markdown="1"> -->
+
+<!-- {% capture localwin-content %} -->
 
 ### Windows
 
@@ -112,9 +113,9 @@ Docker Desktop will set up Kubernetes for you quickly and easily. Follow the set
       name: demo
     spec:
       containers:
-      - name: testpod
-        image: alpine:latest
-        command: ["ping", "8.8.8.8"]
+        - name: testpod
+          image: alpine:latest
+          command: ["ping", "8.8.8.8"]
     ```
 
     This describes a pod with a single container, isolating a simple ping to 8.8.8.8.
@@ -160,23 +161,23 @@ Docker Desktop will set up Kubernetes for you quickly and easily. Follow the set
     $ kubectl delete -f pod.yaml
     ```
 
-{% endcapture %}
-{{ localwin-content | markdownify }}
-</div>
+<!-- {% endcapture %}
+{{ localwin-content | markdownify }} -->
+<!-- </div>
 <hr>
-</div>
+</div> -->
 
 ## Enable Docker Swarm
 
 Docker Desktop runs primarily on Docker Engine, which has everything you need to run a Swarm built in. Follow the setup and validation instructions appropriate for your operating system:
 
-<ul class="nav nav-tabs">
+<!-- <ul class="nav nav-tabs">
   <li class="active"><a data-toggle="tab" href="#swarmosx">Mac</a></li>
   <li><a data-toggle="tab" href="#swarmwin">Windows</a></li>
 </ul>
 <div class="tab-content">
   <div id="swarmosx" class="tab-pane fade in active">
-{% capture local-content %}
+{% capture local-content %} -->
 
 ### Mac
 
@@ -239,12 +240,12 @@ Docker Desktop runs primarily on Docker Engine, which has everything you need to
     $ docker service rm demo
     ```
 
-{% endcapture %}
-{{ local-content | markdownify }}
+<!-- {% endcapture %}
+{{ local-content | markdownify }} -->
 
-</div>
+<!-- </div>
 <div id="swarmwin" class="tab-pane fade" markdown="1">
-{% capture localwin-content %}
+{% capture localwin-content %} -->
 
 ### Windows
 
@@ -307,11 +308,11 @@ Docker Desktop runs primarily on Docker Engine, which has everything you need to
     $ docker service rm demo
     ```
 
-{% endcapture %}
+<!-- {% endcapture %}
 {{ localwin-content | markdownify }}
 </div>
 <hr>
-</div>
+</div> -->
 
 ## Conclusion
 

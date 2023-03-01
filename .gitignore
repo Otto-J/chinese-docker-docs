@@ -14,3 +14,5 @@ _kbase/**
 
 node_modules/
 **/.vitepress/cache/
+
+dist/

@@ -223,4 +223,4 @@ you'll keep with a relational database and switch your application to use MySQL.
 But, how should you run MySQL? How do you allow the containers to talk to each
 other? You'll learn about that next!
 
-[Multi container apps](07_multi_container.md){: .button .primary-btn}
+[Multi container apps](07_multi_container.md)`{: .button .primary-btn}`

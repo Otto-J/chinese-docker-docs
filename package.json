@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "docker compose up --build",
-    "docs:dev": "vitepress dev ./",
-    "docs:dev2": "vitepress dev nextwork",
-    "docs:build": "vitepress build ./",
+    "docs:dev": "vitepress dev get-started",
+    "docs:dev2": "vitepress dev ./",
+    "docs:build": "vitepress build get-started",
     "docs:preview": "vitepress preview ./"
   },
   "repository": {

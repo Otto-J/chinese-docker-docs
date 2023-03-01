@@ -11,13 +11,13 @@ registry. The default registry is Docker Hub and is where all of the images you'
 
 > **Docker ID**
 >
-> A Docker ID allows you to access Docker Hub which is the world's largest library and community for container images. Create a [Docker ID](https://hub.docker.com/signup){:target="_blank" rel="noopener" class="_"} for free if you don't have one.
+> A Docker ID allows you to access Docker Hub which is the world's largest library and community for container images. Create a [Docker ID](https://hub.docker.com/signup)`{:target="_blank" rel="noopener" class="_"}` for free if you don't have one.
 
 ## Create a repo
 
 To push an image, you first need to create a repository on Docker Hub.
 
-1. [Sign up](https://www.docker.com/pricing?utm_source=docker&utm_medium=webreferral&utm_campaign=docs_driven_upgrade){:target="_blank" rel="noopener" class="_"} or Sign in to [Docker Hub](https://hub.docker.com){:target="_blank" rel="noopener" class="_"}.
+1. [Sign up](https://www.docker.com/pricing?utm_source=docker&utm_medium=webreferral&utm_campaign=docs_driven_upgrade)`{:target="_blank" rel="noopener" class="_"}` or Sign in to [Docker Hub](https://hub.docker.com)`{:target="_blank" rel="noopener" class="_"}`.
 
 2. Select the **Create Repository** button.
 
@@ -25,14 +25,14 @@ To push an image, you first need to create a repository on Docker Hub.
 
    > **Private repositories**
    >
-   > Did you know that Docker offers private repositories which allows you to restrict content to specific users or teams? Check out the details on the [Docker pricing](https://www.docker.com/pricing?utm_source=docker&utm_medium=webreferral&utm_campaign=docs_driven_upgrade){:target="_blank" rel="noopener" class="_"} page.
+   > Did you know that Docker offers private repositories which allows you to restrict content to specific users or teams? Check out the details on the [Docker pricing](https://www.docker.com/pricing?utm_source=docker&utm_medium=webreferral&utm_campaign=docs_driven_upgrade)`{:target="_blank" rel="noopener" class="_"}` page.
 
 4. Select the **Create** button.
 
 If you look at the image below an example Docker command can be seen. This command will push to this repo.
 
-![Docker command with push example](images/push-command.png){: style=width:75% }
-{: .text-center }
+![Docker command with push example](images/push-command.png)`{: style=width:75% }`
+`{: .text-center }`
 
 ## Push the image
 
@@ -86,7 +86,7 @@ new instance that has never seen this container image. To do this, you will use 
 >
 > Docker buildx also supports building multi-platform images. To learn more, see [Mult-platform images](../build/building/multi-platform.md).
 
-1. Open your browser to [Play with Docker](https://labs.play-with-docker.com/){:target="_blank" rel="noopener" class="_"}.
+1. Open your browser to [Play with Docker](https://labs.play-with-docker.com/)`{:target="_blank" rel="noopener" class="_"}`.
 
 2. Select **Login** and then select **docker** from the drop-down list.
 
@@ -94,7 +94,7 @@ new instance that has never seen this container image. To do this, you will use 
 
 4. Once you're logged in, select the **ADD NEW INSTANCE** option on the left side bar. If you don't see it, make your browser a little wider. After a few seconds, a terminal window opens in your browser.
 
-   ![Play with Docker add new instance](images/pwd-add-new-instance.png){: style=width:75% }
+   ![Play with Docker add new instance](images/pwd-add-new-instance.png)`{: style=width:75% }`
 
 5. In the terminal, start your freshly pushed app.
 
@@ -118,4 +118,4 @@ Now you can circle back around to what you noticed at the end of the last
 section. As a reminder, you noticed that when you restarted the app, you lost all of your todo list items.
 That's obviously not a great user experience, so next you'll learn how you can persist the data across restarts.
 
-[Persist the DB](05_persisting_data.md){: .button .primary-btn}
+[Persist the DB](05_persisting_data.md)`{: .button .primary-btn}`

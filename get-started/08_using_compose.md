@@ -59,7 +59,6 @@ $ docker run -dp 3000:3000 \
    The name will automatically become a network alias, which will be useful when defining our MySQL service.
 
    ```yaml
-
    services:
      app:
        image: node:18-alpine
@@ -75,7 +74,6 @@ $ docker run -dp 3000:3000 \
        command: sh -c "yarn install && yarn run dev"
    ```
 
-
 3. Let's migrate the `-p 3000:3000` part of the command by defining the `ports` for the service. We will use the
    [short syntax](../compose/compose-file/compose-file-v3.md#short-syntax-1) here, but there is also a more verbose
    [long syntax](../compose/compose-file/compose-file-v3.md#long-syntax-1) available as well.
@@ -88,11 +86,11 @@ $ docker run -dp 3000:3000 \
        ports:
          - 3000:3000
    ```
- 
+
 4. Next, we'll migrate both the working directory (`-w /app`) and the volume mapping (`-v "$(pwd):/app"`) by using
    the `working_dir` and `volumes` definitions. Volumes also has a [short](../compose/compose-file/compose-file-v3.md#short-syntax-3) and [long](../compose/compose-file/compose-file-v3.md#long-syntax-3) syntax.
 
-    One advantage of Docker Compose volume definitions is we can use relative paths from the current directory.
+   One advantage of Docker Compose volume definitions is we can use relative paths from the current directory.
 
    ```yaml
    services:
@@ -142,7 +140,6 @@ $ docker run -d \
    go ahead and specify the image to use as well.
 
    ```yaml
-
    services:
      app:
        # The app service definition
@@ -188,9 +185,7 @@ $ docker run -d \
 
 At this point, our complete `docker-compose.yml` should look like this:
 
-
 ```yaml
-
 services:
   app:
     image: node:18-alpine
@@ -227,46 +222,46 @@ Now that we have our `docker-compose.yml` file, we can start it up!
 2. Start up the application stack using the `docker compose up` command. We'll add the `-d` flag to run everything in the
    background.
 
-    ```console
-    $ docker compose up -d
-    ```
+   ```console
+   $ docker compose up -d
+   ```
 
-    When we run this, we should see output like this:
+   When we run this, we should see output like this:
 
-    ```plaintext
-    Creating network "app_default" with the default driver
-    Creating volume "app_todo-mysql-data" with default driver
-    Creating app_app_1   ... done
-    Creating app_mysql_1 ... done
-    ```
+   ```plaintext
+   Creating network "app_default" with the default driver
+   Creating volume "app_todo-mysql-data" with default driver
+   Creating app_app_1   ... done
+   Creating app_mysql_1 ... done
+   ```
 
-    You'll notice that the volume was created as well as a network! By default, Docker Compose automatically creates a network specifically for the application stack (which is why we didn't define one in the compose file).
+   You'll notice that the volume was created as well as a network! By default, Docker Compose automatically creates a network specifically for the application stack (which is why we didn't define one in the compose file).
 
 3. Let's look at the logs using the `docker compose logs -f` command. You'll see the logs from each of the services interleaved
-    into a single stream. This is incredibly useful when you want to watch for timing-related issues. The `-f` flag "follows" the
-    log, so will give you live output as it's generated.
+   into a single stream. This is incredibly useful when you want to watch for timing-related issues. The `-f` flag "follows" the
+   log, so will give you live output as it's generated.
 
-    If you have run the command already, you'll see output that looks like this:
+   If you have run the command already, you'll see output that looks like this:
 
-    ```plaintext
-    mysql_1  | 2019-10-03T03:07:16.083639Z 0 [Note] mysqld: ready for connections.
-    mysql_1  | Version: '8.0.31'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server (GPL)
-    app_1    | Connected to mysql db at host mysql
-    app_1    | Listening on port 3000
-    ```
+   ```plaintext
+   mysql_1  | 2019-10-03T03:07:16.083639Z 0 [Note] mysqld: ready for connections.
+   mysql_1  | Version: '8.0.31'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server (GPL)
+   app_1    | Connected to mysql db at host mysql
+   app_1    | Listening on port 3000
+   ```
 
-    The service name is displayed at the beginning of the line (often colored) to help distinguish messages. If you want to
-    view the logs for a specific service, you can add the service name to the end of the logs command (for example,
-    `docker compose logs -f app`).
+   The service name is displayed at the beginning of the line (often colored) to help distinguish messages. If you want to
+   view the logs for a specific service, you can add the service name to the end of the logs command (for example,
+   `docker compose logs -f app`).
 
-    > **Tip: Waiting for the DB before starting the app**
-    >
-    > When the app is starting up, it actually sits and waits for MySQL to be up
-    > and ready before trying to connect to it. Docker doesn't have any built-in
-    > support to wait for another container to be fully up, running, and ready
-    > before starting another container. For Node-based projects, you can use
-    > the [wait-port](https://github.com/dwmkerr/wait-port){:target="_blank" rel="noopener" class="_"}
-    > dependency. Similar projects exist for other languages/frameworks.
+   > **Tip: Waiting for the DB before starting the app**
+   >
+   > When the app is starting up, it actually sits and waits for MySQL to be up
+   > and ready before trying to connect to it. Docker doesn't have any built-in
+   > support to wait for another container to be fully up, running, and ready
+   > before starting another container. For Node-based projects, you can use
+   > the [wait-port](https://github.com/dwmkerr/wait-port)`{:target="_blank" rel="noopener" class="_"}`
+   > dependency. Similar projects exist for other languages/frameworks.
 
 4. At this point, you should be able to open your app and see it running. And hey! We're down to a single command!
 
@@ -289,15 +284,15 @@ quickly see what container is our app and which container is the mysql database.
 When you're ready to tear it all down, simply run `docker compose down` or hit the trash can on the Docker Dashboard
 for the entire app. The containers will stop and the network will be removed.
 
->**Warning**
+> **Warning**
 >
->Removing Volumes
+> Removing Volumes
 >
->By default, named volumes in your compose file are NOT removed when running `docker compose down`. If you want to
->remove the volumes, you will need to add the `--volumes` flag.
+> By default, named volumes in your compose file are NOT removed when running `docker compose down`. If you want to
+> remove the volumes, you will need to add the `--volumes` flag.
 >
->The Docker Dashboard does _not_ remove volumes when you delete the app stack.
-{: .warning}
+> The Docker Dashboard does _not_ remove volumes when you delete the app stack.
+> `{: .warning}`
 
 Once torn down, you can switch to another project, run `docker compose up` and be ready to contribute to that project! It really
 doesn't get much simpler than that!
@@ -309,6 +304,6 @@ sharing of multi-service applications. You created a Compose file by translating
 using into the appropriate compose format.
 
 At this point, you're starting to wrap up the tutorial. However, there are a few best practices about
-image building you should cover, as there is a big issue with the Dockerfile you've been using. 
+image building you should cover, as there is a big issue with the Dockerfile you've been using.
 
-[Image-building best practices](09_image_best.md){: .button  .primary-btn}
+[Image-building best practices](09_image_best.md)`{: .button  .primary-btn}`

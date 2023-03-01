@@ -21,9 +21,9 @@ a container quitting) and then work to make **actual state** reflect the expecte
 
 ## Cloud Native Computing Foundation projects
 
-The CNCF is a vendor-neutral home for various open-source projects, including Kubernetes, Prometheus, 
-Envoy, Linkerd, NATS, and more! You can view the [graduated and incubated projects here](https://www.cncf.io/projects/){:target="_blank" rel="noopener" class="_"}
-and the entire [CNCF Landscape here](https://landscape.cncf.io/){:target="_blank" rel="noopener" class="_"}. There are a LOT of projects to help
+The CNCF is a vendor-neutral home for various open-source projects, including Kubernetes, Prometheus,
+Envoy, Linkerd, NATS, and more! You can view the [graduated and incubated projects here](https://www.cncf.io/projects/)`{:target="_blank" rel="noopener" class="_"}`
+and the entire [CNCF Landscape here](https://landscape.cncf.io/)`{:target="_blank" rel="noopener" class="_"}`. There are a LOT of projects to help
 solve problems around monitoring, logging, security, image registries, messaging, and more!
 
 So, if you're new to the container landscape and cloud-native application development, welcome! Please
@@ -33,22 +33,21 @@ connect with the community, ask questions, and keep learning! We're excited to h
 
 We recommend the video workshop from DockerCon 2022. Watch the video below or use the links to open the video at a particular section.
 
-* [Docker overview and installation](https://youtu.be/gAGEar5HQoU)
-* [Pull, run, and explore containers](https://youtu.be/gAGEar5HQoU?t=1400)
-* [Build a container image](https://youtu.be/gAGEar5HQoU?t=3185)
-* [Containerize an app](https://youtu.be/gAGEar5HQoU?t=4683)
-* [Connect a DB and set up a bind mount](https://youtu.be/gAGEar5HQoU?t=6305)
-* [Deploy a container to the cloud](https://youtu.be/gAGEar5HQoU?t=8280)
+- [Docker overview and installation](https://youtu.be/gAGEar5HQoU)
+- [Pull, run, and explore containers](https://youtu.be/gAGEar5HQoU?t=1400)
+- [Build a container image](https://youtu.be/gAGEar5HQoU?t=3185)
+- [Containerize an app](https://youtu.be/gAGEar5HQoU?t=4683)
+- [Connect a DB and set up a bind mount](https://youtu.be/gAGEar5HQoU?t=6305)
+- [Deploy a container to the cloud](https://youtu.be/gAGEar5HQoU?t=8280)
 
 <iframe src="https://www.youtube-nocookie.com/embed/gAGEar5HQoU" style="max-width: 100%; aspect-ratio: 16 / 9;" width="560" height="auto" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Creating a container from scratch
 
- If you'd like to see how containers are built from scratch, Liz Rice from Aqua Security has a fantastic talk in which she creates a container from scratch in Go. While the talk does not go into networking, using images for the filesystem, and other advanced topics, it gives a deep dive into how things are working.
+If you'd like to see how containers are built from scratch, Liz Rice from Aqua Security has a fantastic talk in which she creates a container from scratch in Go. While the talk does not go into networking, using images for the filesystem, and other advanced topics, it gives a deep dive into how things are working.
 
  <iframe src="https://www.youtube-nocookie.com/embed/8fi7uSYlOdc" style="max-width: 100%; aspect-ratio: 16 / 9;" width="560" height="auto" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Language-specific guides
 
 If you are looking for information on how to containerize an application using your favorite language, see [Language-specific getting started guides](../language/index.md).
-

@@ -1,12 +1,12 @@
 ---
-description: Get an in-depth overview of the Docker platform including what it can be used for, the architecture it employs, and its underlying technology. 
+description: Get an in-depth overview of the Docker platform including what it can be used for, the architecture it employs, and its underlying technology.
 keywords: what is a docker, docker daemon, why use docker, docker architecture, what to use docker for, docker client, what is docker for, why docker, uses for docker, what is docker container used for, what are docker containers used for
 redirect_from:
-- /introduction/understanding-docker/
-- /engine/userguide/basics/
-- /engine/introduction/understanding-docker/
-- /engine/understanding-docker/
-- /engine/docker-overview/
+  - /introduction/understanding-docker/
+  - /engine/userguide/basics/
+  - /engine/introduction/understanding-docker/
+  - /engine/understanding-docker/
+  - /engine/docker-overview/
 title: Docker overview
 ---
 
@@ -29,9 +29,9 @@ same way.
 
 Docker provides tooling and a platform to manage the lifecycle of your containers:
 
-* Develop your application and its supporting components using containers.
-* The container becomes the unit for distributing and testing your application.
-* When you're ready, deploy your application into your production environment,
+- Develop your application and its supporting components using containers.
+- The container becomes the unit for distributing and testing your application.
+- When you're ready, deploy your application into your production environment,
   as a container or an orchestrated service. This works the same whether your
   production environment is a local data center, a cloud provider, or a hybrid
   of the two.
@@ -76,15 +76,15 @@ fewer resources.
 
 ## Docker architecture
 
-Docker uses a client-server architecture. The Docker *client* talks to the
-Docker *daemon*, which does the heavy lifting of building, running, and
-distributing your Docker containers. The Docker client and daemon *can*
+Docker uses a client-server architecture. The Docker _client_ talks to the
+Docker _daemon_, which does the heavy lifting of building, running, and
+distributing your Docker containers. The Docker client and daemon _can_
 run on the same system, or you can connect a Docker client to a remote Docker
 daemon. The Docker client and daemon communicate using a REST API, over UNIX
 sockets or a network interface. Another Docker client is Docker Compose,
 that lets you work with applications consisting of a set of containers.
 
-![Docker Architecture diagram](/engine/images/architecture.svg)
+<!-- ![Docker Architecture diagram](/engine/images/architecture.svg) -->
 
 ### The Docker daemon
 
@@ -187,16 +187,18 @@ the default registry configuration):
     stops but is not removed. You can start it again or remove it.
 
 ## The underlying technology
+
 Docker is written in the [Go programming language](https://golang.org/) and takes
 advantage of several features of the Linux kernel to deliver its functionality.
 Docker uses a technology called `namespaces` to provide the isolated workspace
-called the *container*. When you run a container, Docker creates a set of
-*namespaces* for that container.
+called the _container_. When you run a container, Docker creates a set of
+_namespaces_ for that container.
 
 These namespaces provide a layer of isolation. Each aspect of a container runs
 in a separate namespace and its access is limited to that namespace.
 
 ## Next steps
+
 - Read about [installing Docker](../get-docker.md).
 - Get hands-on experience with the [Getting started with Docker](index.md)
-    tutorial.
+  tutorial.
