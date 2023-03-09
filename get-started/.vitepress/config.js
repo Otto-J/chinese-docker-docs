@@ -9,6 +9,7 @@ export default defineConfig({
   lang: 'zh-CN',
   title: 'Docker 民间中文文档',
   outDir: '../dist',
+  base:'/chinese-docker-docs',
   themeConfig: {
     sidebar: [
       { text: 'index', link: '/index.md' },
