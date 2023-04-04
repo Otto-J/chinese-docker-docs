@@ -21,7 +21,8 @@
   },
   "homepage": "https://github.com/Otto-J/chinese-docker-docs#readme",
   "devDependencies": {
-    "vitepress": "1.0.0-alpha.49",
+    "vitepress": "1.0.0-alpha.64",
+    "vitepress-sidebar": "^1.2.0",
     "vue": "^3.2.47"
   }
 }
